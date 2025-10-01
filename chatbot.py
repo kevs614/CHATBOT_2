@@ -57,14 +57,14 @@ with st.sidebar:
     - 📝 Ask about assessment  
     """)
     if "messages" not in st.session_state:
-    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
-    st.session_state.last_action = None
+        st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
+        st.session_state.last_action = None
 
     # Reset button (patched)
     if st.button("🔄 Reset Chat"):
-    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
-    st.session_state.last_action = None
-    st.rerun()   # ✅ replaced st.experimental_rerun()
+        st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
+        st.session_state.last_action = None
+        st.rerun()   # ✅ replaced st.experimental_rerun()
 
 # --------------------------
 # Top title
