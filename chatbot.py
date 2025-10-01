@@ -56,10 +56,15 @@ with st.sidebar:
     - 📞 Talk to a human agent  
     - 📝 Ask about assessment  
     """)
-    if st.button("🔄 Reset Chat"):
-        st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
-        st.session_state.last_action = None
-        st.experimental_rerun()
+    if "messages" not in st.session_state:
+    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
+    st.session_state.last_action = None
+
+# Reset button (patched)
+if st.button("🔄 Reset Chat"):
+    st.session_state.messages = [("Bot", "👋 Hi! Welcome to TESDA-BSAT Chatbot. Type 'help' to see options.")]
+    st.session_state.last_action = None
+    st.rerun()   # ✅ replaced st.experimental_rerun()
 
 # --------------------------
 # Top title
