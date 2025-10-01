@@ -46,7 +46,7 @@ if "last_action" not in st.session_state:
 # Sidebar info + reset
 # --------------------------
 with st.sidebar:
-    st.image("logo.png", width=210)  # 🟢 Add logo also in sidebar
+    st.image("https://github.com/kevs614/CHATBOT_2/blob/main/logo.png?raw=true", width=210)  # 🟢 Add logo also in sidebar
     st.title("ℹ️ BSAT Friendly Chatbot")
     st.write("You may ask anything about our Institution. You can:")
     st.markdown("""
